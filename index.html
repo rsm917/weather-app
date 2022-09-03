@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="card" id="weather">
+      <div class="card-body" id="card-body">
+        <div class="container" id="container">
+          <div class="row">
+            <div class="col">
+              <h1 id="location">Mobile</h1>
+
+              <h2 id="current-date">Wednesday, August 3rd 2022</h2>
+            </div>
+            <div class="col">
+              <h1 id="current-temperature"></h1>
+              <h2 id="temp-units">°F|°C</h2>
+            </div>
+            <div class="col" id="weather-icon">sunicon</div>
+            <div class="col">
+              <form class="change-city" id="change-city-form">
+                <input
+                  type="text"
+                  id="city-input"
+                  placeholder="Enter city name"
+                />
+
+                <button id="change-city-button" type="submit" value="search">
+                  Search
+                </button>
+                <button id="current-location-button" input type="click">
+                  Use my location
+                </button>
+              </form>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <ul id="weather-details">
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
+              <div class="col">
+                <p id="current-high">Hi 90° Lo 73°</p>
+              </div>
+
+              <div class="col">
+                <p id="weather-description">Mostly Sunny</p>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row">
+              <div class="col">
+                Monday
+                <br />
+                weather-icon
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+              <div class="col">
+                Tuesday
+                <br />
+                weather-icon
+
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+              <div class="col">
+                Wednesday
+                <br />
+                weather-icon
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+              <div class="col">
+                Thursday
+                <br />
+                weather-icon
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+              <div class="col">
+                Friday
+                <br />
+                weather-icon
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+              <div class="col">
+                Saturday
+                <br />
+                weather-icon
+
+                <br />
+                Hi 90°| Lo 86°
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

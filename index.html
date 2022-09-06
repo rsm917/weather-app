@@ -21,51 +21,126 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container" id="container"></div>
+    <div class="container" id="container">
+
+    </div>
     <div class="d-flex flex-wrap" id="weather-wrapper">
-      <div id="weather-app">
-        <div class="row">
-          <div class="col">
-            <h1 id="location">Mobile</h1>
+      <div  id="weather-app">
+        
+          <div class="row">
+            <div class="col">
+              <h1 id="location">Mobile</h1>
 
-            <h2 id="current-date"></h2>
-            <ul id="weather-details">
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> m/h</li>
-            </ul>
-          </div>
-          <div class="col" id="temp-div">
-            <span id="current-temperature"></span>
-            <p id="temp-units">°F|°C</p>
-            <br />
-            <span id="current-high"></span><span id="current-low"></span>
-          </div>
-          <div class="col" id="weather-icon">
-            <img src="images/partly-cloudy.jpg" id="partly-cloudy-img" />
-            <p id="weather-description"></p>
-          </div>
-          <div class="col">
-            <form class="change-city" id="change-city-form">
-              <input
-                type="text"
-                id="city-input"
-                autocomplete="off"
-                placeholder="Enter city name"
-              />
-
-              <button id="change-city-button" type="submit" value="search">
-                Search
-              </button>
-              <button id="current-location-button" input type="click">
-                <img
-                  src="images/current-location.jpeg"
-                  id="current-location-img"
+              <h2 id="current-date"></h2>
+              <ul id="weather-details">
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> m/h</li>
+                </ul>
+            </div>
+            <div class="col" id="temp-div">
+              <span id="current-temperature"></span
+                ><p id="temp-units">°F|°C</p>
+                <br/>
+                <span id="current-high"></span
+                  ><span id="current-low"></span>
+            </div>
+            <div class="col" id="weather-icon">
+               <img
+                    src="images/partly-cloudy.jpg"
+                    id="partly-cloudy-img"
+                  />
+              <p id="weather-description"></p>
+            </div>
+            <div class="col">
+              <form class="change-city" id="change-city-form">
+                <input
+                  type="text"
+                  id="city-input"
+                  autocomplete="off"
+                  placeholder="Enter city name"
                 />
-              </button>
-            </form>
+
+                <button id="change-city-button" type="submit" value="search">
+                  Search
+                </button>
+                <button id="current-location-button" input type="click">
+                  <img
+                    src="images/current-location.jpeg"
+                    id="current-location-img"
+                  />
+                </button>
+              </form>
+            </div>
+
+            
+              
+
+            
+              
+            </div>
+            <div class="row">
+              <div class="col">
+                Monday
+                <br />
+                weather-icon
+                <br />
+                90°|86°
+                <br />
+              </div>
+              <div class="col">
+                Tuesday
+                <br />
+                weather-icon
+
+                <br />
+                90°|86°
+                <br />
+              </div>
+              <div class="col">
+                Wednesday
+                <br />
+                weather-icon
+                <br />
+                90°|86°
+                <br />
+              </div>
+              <div class="col">
+                Thursday
+                <br />
+                weather-icon
+                <br />
+                90°|86°
+                <br />
+              </div>
+              <div class="col">
+                Friday
+                <br />
+                weather-icon
+                <br />
+                90°|86°
+                <br />
+              </div>
+              <div class="col">
+                Saturday
+                <br />
+                weather-icon
+
+                <br />
+                90°|86°
+                <br />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <span id="coded-by">
+      <a href="https://github.com/rsm917/weather-app.git" target="blank">
+        Open-source code</a
+      >
+      by Rebecca Shuping</span
+    >
+    <script src="src/index.js"></script>
   </body>
 </html>
+

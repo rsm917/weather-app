@@ -121,6 +121,56 @@ function displayFahrenheitTemp(event) {
   celsiusLink.classList.remove("active");
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+    "Monday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+            
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                weather-icon
+                <div class="weather-forecast-temps">
+                  <span class="forecast-temp-high">90°</span
+                  ><span class="forecast-temp-low">|86°</span>
+                </div>
+              </div>
+                        
+          
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  //forecastHTML =
+  //forecastHTML +
+  //`
+
+  //        <div class="col-2">
+  //        <div class="weather-forecast-date">Monday</div>
+  //      weather-icon
+  //    <div class="weather-forecast-temps">
+  //    <span class="forecast-temp-high">90°</span
+  //  ><span class="forecast-temp-low">|86°</span>
+  //</div>
+  //</div>
+
+  //`;
+
+  //forecastHTML = forecastHTML + `</div>`;
+  //forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
 let fahrenheitTemp = null;
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);

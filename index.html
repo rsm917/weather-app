@@ -22,33 +22,28 @@
   </head>
   <body>
     <div class="container" id="container">
-
-    </div>
-    <div class="d-flex flex-wrap" id="weather-wrapper">
-      <div  id="weather-app">
-        
+      <div class="d-flex flex-wrap" id="weather-wrapper">
+        <div id="weather-app">
           <div class="row">
             <div class="col">
               <h1 id="location">Mobile</h1>
-
               <h2 id="current-date"></h2>
               <ul id="weather-details">
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind"></span> m/h</li>
-                </ul>
+                <li>Humidity:<span id="humidity"></span>%</li>
+                <li>Wind:<span id="wind"></span> m/h</li>
+              </ul>
             </div>
             <div class="col" id="temp-div">
-              <span id="current-temperature"></span
-                ><p id="temp-units"><a href="#" id="fahrenheit-link" class="active">°F|</a><a href="#" id="celsius-link">°C</a></p>
-                <br/>
-                <span id="current-high"></span
-                  ><span id="current-low"></span>
+              <span id="current-temperature"></span>
+              <p id="temp-units">
+                <a href="#" id="fahrenheit-link" class="active">°F|</a
+                ><a href="#" id="celsius-link">°C</a>
+              </p>
+              <br />
+              <span id="current-high"></span><span id="current-low"></span>
             </div>
             <div class="col" id="weather-icon">
-               <img
-                    src="#"
-                    id="icon"
-                  />
+              <img src="#" id="icon" />
               <p id="weather-description"></p>
             </div>
             <div class="col">
@@ -71,71 +66,26 @@
                 </button>
               </form>
             </div>
+          </div>
 
-            
-              
-
-            
-              
-            </div>
+          <div class="weather-forecast">
             <div class="row">
-              <div class="col">
-                Monday
-                <br />
+              <div class="col-2">
+                <div class="weather-forecast-date">Monday</div>
                 weather-icon
-                <br />
-                90°|86°
-                <br />
-              </div>
-              <div class="col">
-                Tuesday
-                <br />
-                weather-icon
-
-                <br />
-                90°|86°
-                <br />
-              </div>
-              <div class="col">
-                Wednesday
-                <br />
-                weather-icon
-                <br />
-                90°|86°
-                <br />
-              </div>
-              <div class="col">
-                Thursday
-                <br />
-                weather-icon
-                <br />
-                90°|86°
-                <br />
-              </div>
-              <div class="col">
-                Friday
-                <br />
-                weather-icon
-                <br />
-                90°|86°
-                <br />
-              </div>
-              <div class="col">
-                Saturday
-                <br />
-                weather-icon
-
-                <br />
-                90°|86°
-                <br />
+                <div class="weather-forecast-temps">
+                  <span class="forecast-temp-high">90°</span
+                  ><span class="forecast-temp-low">|86°</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <span id="coded-by">
-      <a href="https://github.com/rsm917/weather-app.git" target="blank">
+      <a href="https://github.com/rsm917/weather-app.git" target="_blank">
         Open-source code</a
       >
       by Rebecca Shuping</span
@@ -143,4 +93,3 @@
     <script src="src/index.js"></script>
   </body>
 </html>
-

@@ -48,7 +48,20 @@ function displayWeather(response) {
   let location = document.querySelector("#location");
   location.innerHTML = response.data.name;
   let locationTemp = document.querySelector("#current-temperature");
-  locationTemp.innerHTML = `${Math.round(response.data.main.temp)}°F`;
+  locationTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#current-high").innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}° | `;
+  document.querySelector("#current-low").innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}°`;
+  document.querySelector("#weather-description").innerHTML =
+    response.data.weather[0].description;
+  console.log(response);
 }
 
 function search(cityInput) {

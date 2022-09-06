@@ -110,3 +110,17 @@ body {
   max-width: 75px;
   max-height: 75px;
 }
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+#temp-div .active {
+  color: #5d7574;
+  cursor: default;
+}
+
+#temp-div .active:hover {
+  text-decoration: none;
+}

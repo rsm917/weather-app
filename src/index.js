@@ -47,8 +47,10 @@ currentDate.innerHTML = formatDate(now);
 function displayWeather(response) {
   let location = document.querySelector("#location");
   location.innerHTML = response.data.name;
+  fahrenheitTemp = response.data.main.temp;
   let locationTemp = document.querySelector("#current-temperature");
-  locationTemp.innerHTML = `${Math.round(response.data.main.temp)}`;
+  locationTemp.innerHTML = `${Math.round(fahrenheitTemp)}`;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -61,7 +63,6 @@ function displayWeather(response) {
   )}°`;
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
-  console.log(response);
 }
 
 function search(cityInput) {
@@ -96,5 +97,29 @@ function currentPosition(event) {
 
 let currentButton = document.querySelector("#current-location-button");
 currentButton.addEventListener("click", currentPosition);
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+}
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+}
+
+let fahrenheitTemp = null;
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 search("Mobile");

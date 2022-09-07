@@ -59,8 +59,7 @@ function displayWeather(response) {
   document.querySelector("#current-low").innerHTML = `${Math.round(
     response.data.main.temp_min
   )}°`;
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
+
   getForecast(response.data.coord);
   //console.log(response.data);
 }

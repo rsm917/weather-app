@@ -5,10 +5,6 @@ body {
   max-width: 700px;
   max-height: 500px;
 }
-#weather-wrapper {
-  max-width: 600px;
-  margin-bottom: 0 auto;
-}
 
 #weather-app {
   background-color: #dde7e4;
@@ -31,7 +27,12 @@ body {
   font-size: 50px;
   color: #4f5e58;
   line-height: 1;
-  margin-left: 10px;
+  margin-left: 40px;
+}
+#current-location-img {
+  max-width: 20px;
+  max-height: 20px;
+  margin-left: 40px;
 }
 #current-date {
   font-size: 15px;
@@ -40,6 +41,7 @@ body {
   padding-top: 0px;
   margin-bottom: 20px;
 }
+
 #city-input {
   border: 1px solid #4f5e58;
   border-radius: 7px;
@@ -56,7 +58,7 @@ body {
   color: #4f5e58;
   font-size: 15px;
   margin-top: 6px;
-  margin-left: -30px;
+  margin-left: -33px;
   text-align: left;
 }
 #current-location-button {
@@ -85,14 +87,9 @@ body {
   list-style: none;
 }
 
-#current-location-img {
-  max-width: 20px;
-  max-height: 20px;
-  text-align: left;
-}
 #coded-by {
   font-size: 14px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 10px;
 }
 #git-link {
   text-decoration: none;

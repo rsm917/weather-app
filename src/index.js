@@ -55,13 +55,11 @@ function displayWeather(response) {
   );
 
   getForecast(response.data.coord);
-  //console.log(response.data);
 }
 
 function search(cityInput) {
   let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?q=";
-  //let cityInput = document.querySelector("#city-input");
   let apiUrl = `${apiEndpoint} ${cityInput}&units=imperial&appid=${apiKey}`;
   axios.get(apiUrl).then(displayWeather);
 }
@@ -172,4 +170,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
-search("Mobile");
+search("Chattanooga");

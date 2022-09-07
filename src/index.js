@@ -123,34 +123,52 @@ function displayFahrenheitTemp(event) {
   celsiusLink.classList.remove("active");
 }
 
-function displayForecast(response) {
-  console.log(response.data);
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
   let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
-    "Monday",
   ];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` 
             
               <div class="col-2">
-                <div class="weather-forecast-date">${day}</div>
-                weather-icon
+                <div class="weather-forecast-date"> ${formatDay(
+                  forecastDay.dt
+                )} </div>
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt="" width="42"/>
                 <div class="weather-forecast-temps">
-                  <span class="forecast-temp-high">90°</span
-                  ><span class="forecast-temp-low">|86°</span>
+                  <span class="forecast-temp-high">${Math.round(
+                    forecastDay.temp.max
+                  )}°</span
+                  ><span class="forecast-temp-low">|${Math.round(
+                    forecastDay.temp.min
+                  )}°</span>
                 </div>
               </div>
                         
           
   `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;

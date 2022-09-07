@@ -105,8 +105,10 @@ body {
   max-height: 20px;
 }
 #coded-by {
-  margin-left: 20px;
   font-size: 14px;
+  margin: 0 0 0 20px;
+}
+#git-link {
   text-decoration: none;
 }
 
